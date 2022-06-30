@@ -1,0 +1,10 @@
+{% extends 'status/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h3>Add your Location:</h3>
+<form method="post">{% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" class="btn btn-danger" value="add">
+</form>
+{% endblock %}
